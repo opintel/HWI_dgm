@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 """
 Modulo que contiene las herramientas
 y funciones necesarias para calcular

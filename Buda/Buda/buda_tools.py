@@ -326,9 +326,9 @@ def scrapear_api_buda():
     # Se crea el ranking de las dependencias
     ranking = MatTableros.calcula_ranking(JSON_DEPENDENCIAS)
     # Se guarda en cache por 27 horas
-    cache.set(KEY_DEPEN, ranking, CACHE_TTL)
-    cache.set(KEY_RECUR, JSON_RECURSOS, CACHE_TTL)
-    cache.set(KEY_DEPEND_RECURSOS, JSON_RECURSOS_DEPENDENCIAS, CACHE_TTL)
+    cache.set(KEY_DEPEN, ranking, timeout=None)
+    cache.set(KEY_RECUR, JSON_RECURSOS, timeout=None)
+    cache.set(KEY_DEPEND_RECURSOS, JSON_RECURSOS_DEPENDENCIAS, timeout=None)
     #cache.set(KEY_DEPENDENCIA_INFO, JSON_DEPENDENCIAS_INFO, CACHE_TTL)
 
     print "************************Terminan calculos*************************************"
